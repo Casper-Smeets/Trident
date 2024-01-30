@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<!-- saved from url=(0040)https://tridentv2.w3spaces.com/Home.html -->
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TridentSite</title>
+    <style>
+      body {
+        font-family: Comic Sans MS;
+        margin: 0;
+        padding: 0 0 3rem 0;
+        background-color: #f4f4f4;
+      }
+
+      header {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 0.1em;
+      }
+
+      nav {
+        background-color: #444;
+        padding: 0.5em;
+        text-align: center;
+      }
+
+      nav a {
+        color: #fff;
+        text-decoration: none;
+        padding: 1em;
+        margin: 0 1em;
+      }
+
+      nav a:hover {
+        background-color: #555;
+        cursor: pointer;
+      }
+
+      main {
+        padding: 2em;
+      }
+
+      footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 1em;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+      }
+
+      #admin {
+        width: 100%;
+        padding: 5rem 0;
+      }
+
+      #admin > div:nth-child(1) {
+        width: 40%;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      #admin button {
+        border: 0 solid black;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      }
+
+      #admin button:hover {
+        cursor: pointer;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+      }
+
+      #real_admin {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+        border-radius: 10px;
+        min-height: 350px;
+      }
+
+      #real_admin > div:nth-child(1) {
+        width: 40%;
+        background-color: #333;
+        padding: 10px 10px;
+      }
+
+      #real_admin > div:nth-child(1) > p {
+        text-align: center;
+        color: white;
+        padding: 8px 16px;
+        font-size: 20px;
+      }
+
+      #real_admin > div:nth-child(1) > a {
+        color: white;
+        padding: 8px 16px;
+        display: block;
+        text-align: center;
+      }
+
+      #real_admin > div:nth-child(1) > a:hover {
+        cursor: pointer;
+        background-color: #555;
+        transition: 0.5s;
+      }
+
+      #real_admin > div:nth-child(2) {
+        width: 60%;
+        background-color: white;
+        padding: 10px 30px;
+      }
+
+      #maintenance > p,
+      #resetpwd > p {
+        font-size: 30px;
+        margin: 20px 0;
+      }
+
+      #maintenance > span,
+      #resetpwd > span {
+        font-size: 20px;
+      }
+
+      #maintenance > button,
+      #resetpwd > button {
+        font-size: 18px;
+        margin-right: 10px;
+        padding: 6px 12px;
+        border: 0 solid black;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      }
+
+      #maintenance > button:hover,
+      #resetpwd > button:hover {
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+      }
+
+      #resetpwd > span {
+        width: 100px;
+        display: inline-flex;
+      }
+
+      #resetpwd > input {
+        font-size: 18px;
+        padding: 5px;
+      }
+
+      #error {
+        padding: 20px;
+        text-align: center;
+        font-size: large;
+      }
+
+      .KhanAcademyCategory {
+        background-color: #333;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .enginecom {
+        background-color: #333;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-left: 10px;
+      }
+
+      .nealfun {
+        background-color: #333;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-left: 10px;
+      }
+
+      #resetpwd {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Welcome to Tridentsite!</h1>
+    </header>
+
+    <nav>
+      <a onclick="home()">Trident home</a>
+      <a onclick="categories()">Game categories</a>
+      <a onclick="admin()">Admin</a>
+    </nav>
+
+    <main>
+      <div id="home">
+        <h2>Welcome to tridentsite 2.0! (yay)</h2>
+        <p>
+          In order to play games just click the text that says "Game Categories"
+          and there should be at least 3 categories when you click because I'm
+          still in progress of upgrading Trident.
+        </p>
+        <br />
+        <br />
+        <h1>Update logs:</h1>
+
+        <p>12/13/2023: engineering.com category released</p>
+        <p>
+          12/14/2023: +1 Game added to "Khan Academy" category + fixed button
+          redirects (Some buttons redirected user's to the wrong game)
+        </p>
+        <p>
+          12/15/2023: +1 Game added to "Khan Academy" category (Bee Swarm
+          Simulator)
+        </p>
+        <p>
+          12/17/2023: Changed "About Trident" category name to "Contact
+          Trident".
+        </p>
+        <p>12/19/2023: +1 Game added to "Khan Academy" category (MineKhan)</p>
+      </div>
+      <div id="categories" style="display: none">
+        <a href="https://tridentv2.w3spaces.com/khanacademycategory.html">
+          <button class="KhanAcademyCategory">Khan Academy</button>
+        </a>
+
+        <a href="https://tridentv2.w3spaces.com/engineeringcategory.html">
+          <button class="enginecom">engineering.com</button>
+        </a>
+
+        <a href="https://tridentv2.w3spaces.com/nealcategory.html">
+          <button class="nealfun">Neal.fun</button>
+        </a>
+
+        <a href="https://tridentv2.w3spaces.com/Gamecategories.html">
+          <button class="nealfun">Google games</button>
+        </a>
+      </div>
+      <div id="admin" style="display: none">
+        <div>
+          <p style="font-size: 20px; margin-bottom: 10px">Password:</p>
+          <input
+            type="password"
+            id="password"
+            style="font-size: 18px; margin-bottom: 10px; padding: 5px"
+          />
+          <br />
+          <button onclick="login()" style="font-size: 16px; padding: 6px 12px">
+            Sign In
+          </button>
+        </div>
+        <div id="real_admin" style="display: none">
+          <div>
+            <p>TridentSite</p>
+            <hr />
+            <a onclick="showMainte()">MaintenanceMode</a>
+            <a onclick="showReset()">Reset Password</a>
+          </div>
+          <div>
+            <div id="maintenance">
+              <p>Maintenance Mode</p>
+              <span>Status</span> : <span>Disabled</span> <br /><br />
+              <button onclick="mainte_on()">Enable</button>
+              <button onclick="mainte_off()">Disable</button>
+            </div>
+            <div id="resetpwd">
+              <p>Reset Password</p>
+              <span>Current:</span
+              ><input type="password" id="currentpwd" /><br /><br />
+              <hr />
+              <span>New:</span><input type="password" id="newpwd" /><br /><br />
+              <span>Confirm:</span
+              ><input type="password" id="confirmpwd" /><br /><br />
+              <button onclick="reset()">Reset Password</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="error" style="display: none">
+        Sorry! But we are in maintenance mode. This action could have been done
+        because of a very major and serious issue with the site. Come back soon!
+      </div>
+    </main>
+
+    <footer>© 2023 Tridentsite. All rights reserved.</footer>
+
+    <script>
+      function showMainte() {
+        document.getElementById("maintenance").style.display = "block";
+        document.getElementById("resetpwd").style.display = "none";
+      }
+      function showReset() {
+        document.getElementById("maintenance").style.display = "none";
+        document.getElementById("resetpwd").style.display = "block";
+      }
+      function home() {
+        document.getElementById("home").style.display = "block";
+        document.getElementById("categories").style.display = "none";
+        document.getElementById("admin").style.display = "none";
+        document.getElementById("error").style.display = "none";
+      }
+      function categories() {
+        document.getElementById("home").style.display = "none";
+        document.getElementById("categories").style.display = "block";
+        document.getElementById("admin").style.display = "none";
+        document.getElementById("error").style.display = "none";
+      }
+      function admin() {
+        document.getElementById("home").style.display = "none";
+        document.getElementById("categories").style.display = "none";
+        document.getElementById("admin").style.display = "block";
+        document.getElementById("error").style.display = "none";
+        document.querySelector("#admin > div:nth-child(1)").style.display =
+          "block";
+        document.querySelector("#admin > div:nth-child(2)").style.display =
+          "none";
+        document.getElementById("password").value = "";
+      }
+      function login() {
+        var password = localStorage.getItem("password");
+        if (document.getElementById("password").value == password) {
+          document.querySelector("#admin > div:nth-child(1)").style.display =
+            "none";
+          document.querySelector("#admin > div:nth-child(2)").style.display =
+            "flex";
+          document.getElementById("admin").style.padding = "0";
+        } else {
+          alert("Wrong Password");
+        }
+      }
+      function mainte_on() {
+        localStorage.setItem("maintenance", 1);
+        document.querySelector("#maintenance > span:nth-child(3)").innerHTML =
+          "Enabled";
+        hideElements(1);
+        window.location.reload();
+      }
+      function mainte_off() {
+        localStorage.setItem("maintenance", 0);
+        document.querySelector("#maintenance > span:nth-child(3)").innerHTML =
+          "Disabled";
+        hideElements(0);
+        document.getElementById("error").style.display = "none";
+      }
+      function hideElements(flag) {
+        if (flag) {
+          var navs = document.querySelectorAll("nav > a:not(:last-child)");
+          navs.forEach((element) => {
+            element.style.display = "none";
+          });
+          document.getElementById("home").style.display = "none";
+          document.getElementById("categories").style.display = "none";
+          document.getElementById("error").style.display = "block";
+        } else {
+          var navs = document.querySelectorAll("nav > a:not(:last-child)");
+          navs.forEach((element) => {
+            element.style.display = "inline";
+          });
+          document.getElementById("error").style.display = "none";
+        }
+      }
+      function clearpwd() {
+        document.getElementById("currentpwd").value = "";
+        document.getElementById("newpwd").value = "";
+        document.getElementById("confirmpwd").value = "";
+      }
+      function reset() {
+        var current = document.getElementById("currentpwd").value;
+        var newpwd = document.getElementById("newpwd").value;
+        var confirmpwd = document.getElementById("confirmpwd").value;
+        if (localStorage.getItem("password") == current) {
+          if (newpwd == confirmpwd) {
+            clearpwd();
+            localStorage.setItem("password", newpwd);
+            alert("New Password Set!");
+          } else {
+            clearpwd();
+            alert("Confirm Password Incorrect!");
+          }
+        } else {
+          clearpwd();
+          alert("Current Password Incorrect!");
+        }
+      }
+      document.addEventListener("DOMContentLoaded", function () {
+        localStorage.setItem("password", "admin");
+        if (localStorage.getItem("maintenance") == null) {
+          localStorage.setItem("maintenance", 0);
+        }
+        if (localStorage.getItem("maintenance") == 1) {
+          document.querySelector("#maintenance > span:nth-child(3)").innerHTML =
+            "Enabled";
+          hideElements(1);
+        }
+      });
+    </script>
+  </body>
+</html>
